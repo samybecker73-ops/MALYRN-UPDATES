@@ -1,17 +1,17 @@
 {
   "product": "MALYRN",
   "channel": "stable",
-  "version": "0.9.1",
-  "published_at": "2026-11-22T13:00:00+01:00",
+  "version": "0.9.2",
+  "published_at": "2026-11-22T18:10:00+01:00",
   "minimum_supported_version": "0.9.1",
-  "summary": "MALYRN intègre un canal de vérification des mises à jour PWA.",
+  "summary": "MALYRN migre vers le service central de mises à jour KAVIO.",
   "changes": [
-    "Ajout de MALYRN UPDATE SERVICE dans Compte & appareils.",
-    "Vérification de version via latest.json sur le dépôt public MALYRN-UPDATES.",
-    "Affichage des notes de version et de la dernière vérification.",
-    "Actualisation PWA via Service Worker après déploiement sur l’hébergement de l’application."
+    "Migration du client MALYRN vers le canal central KAVIO UPDATE SERVICE.",
+    "Version applicative portée à 0.9.2 et cache Service Worker renouvelé.",
+    "Les installations 0.9.1 utilisent ce manifeste de transition pour récupérer le nouveau canal.",
+    "Les versions futures sont publiées directement dans KAVIO."
   ],
-  "release_notes_url": "https://github.com/samybecker73-ops/MALYRN-UPDATES/blob/main/releases/v0.9.1.md",
+  "release_notes_url": "https://kavio-update-service.samy-becker73.workers.dev/malyrn/releases/0.9.2.md",
   "application_type": "pwa",
   "update_strategy": "service-worker"
 }
