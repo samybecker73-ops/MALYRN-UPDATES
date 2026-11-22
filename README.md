@@ -1,23 +1,18 @@
-# MALYRN — Canal officiel de mises à jour
+# MALYRN — Canal de transition vers KAVIO
 
-Ce dépôt public héberge le manifeste de versions utilisé par le client de mise à jour de MALYRN.
+Ce dépôt public est conservé comme **pont de migration** pour les installations MALYRN 0.9.1 qui consultent encore l’ancien manifeste GitHub.
 
-## Fichier lu par l’application
+À partir de MALYRN 0.9.2, l’application interroge directement le **KAVIO UPDATE SERVICE** :
+https://kavio-update-service.samy-becker73.workers.dev/malyrn/latest.json
 
-`latest.json` à la racine du dépôt.
+## Rôle de ce dépôt
 
-URL brute :
-https://raw.githubusercontent.com/samybecker73-ops/MALYRN-UPDATES/main/latest.json
+- Annoncer la version de transition 0.9.2 aux anciennes installations.
+- Conserver un historique public des notes publiées avant le transfert.
+- Ne plus servir de source officielle pour les prochaines versions.
 
-## Publier une nouvelle version
+## Version de transition
 
-1. Déployer d’abord les fichiers de l’application MALYRN sur son hébergement HTTPS.
-2. Mettre à jour `version`, `published_at`, `summary`, `changes` et `release_notes_url` dans `latest.json`.
-3. Ajouter les notes de version correspondantes dans `releases/`.
-4. Conserver `product: "MALYRN"` et `channel: "stable"`.
+Voir [les notes MALYRN v0.9.2](releases/v0.9.2.md).
 
-Le dépôt annonce les versions : il ne stocke pas les fichiers PWA et ne remplace pas leur déploiement. L’application demande au navigateur de vérifier un nouveau Service Worker sur son propre domaine.
-
-## Version actuellement publiée
-
-Voir [les notes MALYRN v0.9.1](releases/v0.9.1.md).
+Les prochaines publications sont gérées par le Worker KAVIO documenté dans le dépôt privé KAVIO, sous `workers/kavio-update-service/`.
