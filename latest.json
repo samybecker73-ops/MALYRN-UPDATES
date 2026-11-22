@@ -1,0 +1,17 @@
+{
+  "product": "MALYRN",
+  "channel": "stable",
+  "version": "0.9.1",
+  "published_at": "2026-11-22T13:00:00+01:00",
+  "minimum_supported_version": "0.9.1",
+  "summary": "MALYRN intègre un canal de vérification des mises à jour PWA.",
+  "changes": [
+    "Ajout de MALYRN UPDATE SERVICE dans Compte & appareils.",
+    "Vérification de version via latest.json sur le dépôt public MALYRN-UPDATES.",
+    "Affichage des notes de version et de la dernière vérification.",
+    "Actualisation PWA via Service Worker après déploiement sur l’hébergement de l’application."
+  ],
+  "release_notes_url": "https://github.com/samybecker73-ops/MALYRN-UPDATES/blob/main/releases/v0.9.1.md",
+  "application_type": "pwa",
+  "update_strategy": "service-worker"
+}
